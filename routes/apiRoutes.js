@@ -6,7 +6,7 @@ const {v4: uuidv4 } = require("uuid");
 
 // const dbPath = "../db/db.json";
 
-// get request for notes
+// get notes from json file and sends as response
 router.get("/api/notes", (req, res) => {
     fs.readFile("db/db.json", "utf8", (err, data) => {
         if(err) {
@@ -19,7 +19,7 @@ router.get("/api/notes", (req, res) => {
     })
 })
 
-
+//Post request to add a new note to json file
 router.post("/api/notes", (req, res) => {
     const dbData = JSON.parse(fs.readFileSync("db/db.json", "utf8"));
 
@@ -33,6 +33,7 @@ router.post("/api/notes", (req, res) => {
     res.json(dbData);
 })
 
+//Used async file read and write operations to handle JSON data + error handling
 router.delete("/api/notes/:id", (req, res) => {
     fs.readFile("db/db.json", "utf8", (err, data) => {
         if(err) {
