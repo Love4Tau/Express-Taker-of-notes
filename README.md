@@ -34,6 +34,7 @@
   https://stackoverflow.com/questions/32883626/typeerror-app-use-requires-middleware-functions
   https://stackoverflow.com/questions/37269808/react-js-uncaught-in-promise-syntaxerror-unexpected-token-in-json-at-posit
   https://stackoverflow.com/questions/73359274/syntaxerror-unexpected-token-doctype-is-not-valid-json
+  https://stackoverflow.com/questions/14322989/first-heroku-deploy-failed-error-code-h10
 
   ## License
   

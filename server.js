@@ -19,4 +19,4 @@ app.use(apiRoutes);
 
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
-})
+});
