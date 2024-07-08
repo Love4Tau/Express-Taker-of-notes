@@ -19,7 +19,10 @@
   4) run "npm start" to start app
 
   ## Usage
-  ![alt text](./Taker-of-notes/assets/images/Note%20taker.png)
+
+  [Deployed Application](https://powerful-dusk-80126-899bb6678322.herokuapp.com/)
+
+  ![alt text](./assets/images/Note%20taker.png)
 
   ## Credits
   I referred to the cloud recordings of our class (Mainly the demo/overview of the mini project) and xpert AI tool when I was stuck. 
