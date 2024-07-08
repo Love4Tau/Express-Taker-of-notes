@@ -33,4 +33,25 @@ router.post("/api/notes", (req, res) => {
     res.json(dbData);
 })
 
+router.delete("/api/notes/:id", (req, res) => {
+    fs.readFile("db/db.json", "utf8", (err, data) => {
+        if(err) {
+            res.status(500).send("Error");
+            return;
+        }
+
+        const dbData = JSON.parse(data);
+
+        const newNotes = dbData.filter((note)=> note.id !== req.params.id);
+
+        fs.writeFile("db/db.json", JSON.stringify(newNotes), (err) => {
+            if(err) {
+                res.status(500).send("Error");
+                return;
+            }
+            res.json("Deleted Note.");
+        });
+    });
+});
+
 module.exports = router;
